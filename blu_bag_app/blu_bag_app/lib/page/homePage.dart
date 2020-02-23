@@ -20,7 +20,9 @@ class _homePageState extends State<homePage> {
         print("hello");
         //getRooms().then((data){print(data);});
        // getAndroidId().then((data){print(data);});
+       registerSvr('523f4869fdb6a0a1','1','1');
        getSvrCode().then((data){print("this Svr code ="+data);});
+       
         },
       child: Text("测试"),
       ),

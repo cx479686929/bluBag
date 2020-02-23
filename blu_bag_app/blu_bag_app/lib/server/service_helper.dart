@@ -12,18 +12,19 @@ Future getRooms() async{
     Dio dio=new Dio();
     dio.options.contentType=ContentType.parse("application/x-www-form-urlencoded");
     response=await dio.get(servicePath['getAllRoom']);
+    print(response);
     if(response.statusCode==200){
       return response.data;
     }else{
       throw Exception('后端接口异常');
     }
   }catch(e){
-    return print('ERROR:========>${e}');
+    return print('ERROR:========>$e');
   }
 
 
 }
-Future RegisterSvr(String code,String version,String roomid) async{
+Future registerSvr(String code,String version,String roomid) async{
   try{
     print('开始注册');
     Response response;
@@ -32,8 +33,8 @@ Future RegisterSvr(String code,String version,String roomid) async{
     //dio.options.contentType=ContentType.parse("application/json; charset=utf-8");
     var data={
       'code':code,
-      'version':version,
-      'roomid':roomid,
+      'version':1,
+      'room':1,
     };
     response=await dio.post(servicePath['register'],queryParameters: data);
     if(response.statusCode==200){
@@ -42,7 +43,7 @@ Future RegisterSvr(String code,String version,String roomid) async{
       throw Exception('后端接口异常');
     }
   }catch(e){
-    return print('ERROR:========>${e}');
+    return print('ERROR:========>$e');
   }
 
 
@@ -50,7 +51,7 @@ Future RegisterSvr(String code,String version,String roomid) async{
 
 Future signinOne(String mac,String stuId)async{
   try{
-    print('开始注册');
+    print('一人签到');
     Response response;
     Dio dio=new Dio();
     dio.options.contentType=ContentType.parse("application/x-www-form-urlencoded");
@@ -66,6 +67,6 @@ Future signinOne(String mac,String stuId)async{
       throw Exception('后端接口异常');
     }
   }catch(e){
-    return print('ERROR:========>${e}');
+    return print('ERROR:========>$e');
   }
 }
