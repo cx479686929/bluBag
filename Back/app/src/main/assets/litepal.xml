@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="Setting"></dbname>   <!-- 数据库的名字 -->
+    <version value="3"></version>  <!-- 数据库的版本号 -->
+
+    <list>
+        <!-- 配置数据库中相应的表，暂时不写 -->
+        <mapping class="com.example.back.DataBase.mySetting"></mapping>
+    </list>
+</litepal>

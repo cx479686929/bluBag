@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <!--orderInCategory菜单项的优先级，也就是顺序，只能设置正整数，数值越大菜单项越靠前-->
+
+    <item
+        android:id="@+id/item1"
+        android:orderInCategory="100"
+        android:title="注册ID"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/item2"
+        android:orderInCategory="100"
+        android:title="查看日志"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/item3"
+        android:orderInCategory="100"
+        android:title="配置参数"
+        app:showAsAction="never"/>
+</menu>

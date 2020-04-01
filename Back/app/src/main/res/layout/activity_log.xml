@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LogActivity">
+
+    <Button
+        android:id="@+id/choseDateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:background="@drawable/btn_item"
+        android:text="选择日期" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/LogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false">
+
+        </TextView>
+    </ScrollView>
+
+
+</LinearLayout>
